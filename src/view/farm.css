@@ -1,0 +1,72 @@
+.titled-pane,
+.button,
+.choice-box,
+.label,
+.tree-table-view {
+  -fx-font-family: "FreeSans";
+  -fx-font-size: 11pt;
+  -fx-wrap-text: true;
+}
+
+.button {
+  -fx-background-color: #00927f;
+  -fx-padding: 05 10 05 10;
+  -fx-text-fill: #e7e6e6;
+  -fx-text-alignment: center;
+  -fx-min-width: 90px;
+  -fx-wrap-text: true;
+}
+
+.button:hover {
+  -fx-background-color: #266e65;
+}
+
+.button:pressed {
+  -fx-background-color: #01332c;
+}
+
+.button:focused {
+  -fx-border-color: white, white;
+  -fx-border-style: solid, segments(1, 1);
+}
+
+.choice-box .label {
+  -fx-text-fill: rgb(11, 90, 79);
+  -fx-pref-width: 300px;
+}
+
+.label {
+  -fx-text-fill: rgb(87, 86, 86);
+}
+
+.pane {
+  -fx-background-color: #00927f;
+  -fx-background-fills: #d13535;
+}
+
+.tree-table-cell {
+  -fx-pref-width: 300px;
+}
+.tree-table-view .column-header .label {
+  -fx-opacity: 1;
+  -fx-text-fill: white;
+}
+
+.tree-table-view {
+  -fx-background-color: #d3cece;
+  -fx-base: #bebebe;
+  -fx-control-inner-background: #e7e7e7;
+  -fx-table-cell-border-color: transparent;
+  -fx-table-header-border-color: transparent;
+}
+
+.tree-table-view:focused .table-row-cell:filled:focused:selected {
+  -fx-background-color: -fx-focus-color;
+}
+
+.vbox {
+  -fx-text-fill: #ff0000;
+}
+.hbox {
+  -fx-text-fill: #ff0000;
+}

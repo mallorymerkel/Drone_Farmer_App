@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Arc?>
+
+<AnchorPane fx:id="outerAnchor" minHeight="700.0" minWidth="1200.0" stylesheets="@farm.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Dashboard">
+   <children>
+      <SplitPane dividerPositions="0.5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <VBox>
+               <children>
+                  <SplitPane dividerPositions="0.75" orientation="VERTICAL">
+                    <items>
+                        <TitledPane text="Items and Containers">
+                           <AnchorPane>
+      								   <children>
+      								      <SplitPane dividerPositions="0.5" orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      								        <items>
+                                       <TreeTableView fx:id="itemComponentTree">
+                                         <columns>
+                                           <TreeTableColumn fx:id="nameColumn" maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="Contents" />
+                                         </columns>
+                                          <columnResizePolicy>
+                                             <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                          </columnResizePolicy>
+                                       </TreeTableView>
+                                       <HBox maxHeight="130.0">
+                                          <children>
+                                             <VBox>
+                                                <children>
+         								                  <ButtonBar buttonMinWidth="0.0">
+                                                      <buttons>
+                                                         <Button mnemonicParsing="false" onAction="#handleNewItem" text="Add Item" />
+               								                        <Button mnemonicParsing="false" onAction="#handleNewItemContainer" text="Add Container" />
+                                                         <Arc fill="#1f93ff00" length="270.0" radiusX="11.0" radiusY="17.0" startAngle="45.0" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND" />
+                                                      </buttons>
+                                                      <VBox.margin>
+                                                         <Insets />
+                                                      </VBox.margin>
+                                                      <padding>
+                                                         <Insets top="10.0" />
+                                                      </padding>
+                                                   </ButtonBar>
+         								                  <ButtonBar buttonMinWidth="0.0">
+         								                    <buttons>
+                                                         <Button mnemonicParsing="false" onAction="#handleViewItemComponent" text="View" />
+         								                        <Button mnemonicParsing="false" onAction="#handleEditItemComponent" text="Edit" />
+         								                        <Button mnemonicParsing="false" onAction="#handleDeleteItemComponent" text="Delete" />
+         								                    </buttons>
+                                                      <VBox.margin>
+                                                         <Insets />
+                                                      </VBox.margin>
+                                                      <padding>
+                                                         <Insets top="10.0" />
+                                                      </padding>
+         								                  </ButtonBar>
+                                                   <VBox>
+                                                      <children>
+                                                         <Label fx:id="purchasePrice" text="Purchase Price: 0">
+                                                            <VBox.margin>
+                                                               <Insets />
+                                                            </VBox.margin>
+                                                         </Label>
+                                                         <Label fx:id="marketValue" text="Market Value: 0">
+                                                            <VBox.margin>
+                                                               <Insets />
+                                                            </VBox.margin>
+                                                         </Label>
+                                                      </children>
+                                                      <VBox.margin>
+                                                         <Insets />
+                                                      </VBox.margin>
+                                                      <padding>
+                                                         <Insets left="20.0" top="10.0" />
+                                                      </padding>
+                                                   </VBox>
+                                                </children>
+                                                <HBox.margin>
+                                                   <Insets />
+                                                </HBox.margin>
+                                             </VBox>
+                                          </children>
+                                          <padding>
+                                             <Insets right="10.0" />
+                                          </padding>
+                                       </HBox>
+      								        </items>
+      								      </SplitPane>
+      								   </children>
+      								</AnchorPane>
+                        </TitledPane>
+                        <TitledPane text="Drone Actions">
+                           <content>
+                              <AnchorPane>
+                                 <children>
+                                    <HBox layoutY="10.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <VBox spacing="10.0">
+                                             <children>
+                                                <ChoiceBox fx:id="actionChoiceBox">
+                                                   <VBox.margin>
+                                                      <Insets left="15.0" />
+                                                   </VBox.margin>
+                                                </ChoiceBox>
+                                                <ButtonBar buttonMinWidth="150.0">
+                                                   <buttons>
+                                                      <Button fx:id="launchAnimationButton" mnemonicParsing="false" onAction="#launchAnimation" text="Launch Simulation" textOverrun="CENTER_WORD_ELLIPSIS" />
+                                                    <Button fx:id="launchDroneButton" mnemonicParsing="false" onAction="#launchDrone" text="Launch Drone" />
+                                                   </buttons>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </ButtonBar>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" top="20.0" />
+                                 </padding>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </VBox>
+          <AnchorPane>
+               <children>
+                  <TitledPane animated="false" minHeight="700.0" minWidth="900.0" text="Map" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <content>
+                      <AnchorPane fx:id="mapPane" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0">
+                      <children>
+                              <ImageView fx:id="drone" fitHeight="67.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/drone.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                      </AnchorPane>
+                    </content>
+                  </TitledPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

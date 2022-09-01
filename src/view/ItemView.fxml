@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="310.0" prefWidth="306.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ItemViewController">
+   <children>
+      <GridPane layoutX="30.0" layoutY="28.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="107.66668701171875" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="178.33331298828125" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="28.333343505859375" minHeight="10.0" prefHeight="22.333343505859375" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="39.666656494140625" minHeight="10.0" prefHeight="27.666656494140625" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="46.66668701171875" minHeight="10.0" prefHeight="27.666656494140625" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="43.333343505859375" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="49.66668701171875" minHeight="10.0" prefHeight="25.333343505859375" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="25.666656494140625" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="21.666656494140625" prefHeight="29.666656494140625" />
+            <RowConstraints maxHeight="32.333343505859375" minHeight="21.333343505859375" prefHeight="26.0" />
+            <RowConstraints maxHeight="24.0" minHeight="21.333343505859375" prefHeight="24.0" />
+        </rowConstraints>
+         <children>
+            <Label text="Name" />
+            <Label text="Price" GridPane.rowIndex="1" />
+            <Label text="Market Value" GridPane.rowIndex="2" />
+            <Label text="X Location" GridPane.rowIndex="3" />
+            <Label text="Y Location" GridPane.rowIndex="4" />
+            <Label text="Length" GridPane.rowIndex="5" />
+            <Label text="Width" GridPane.rowIndex="6" />
+            <Label text="Height" GridPane.rowIndex="7" />
+            <Label fx:id="nameField" GridPane.columnIndex="1" />
+            <Label fx:id="priceField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="marketValueField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="xLocationField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="yLocationField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="lengthField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="widthField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label fx:id="heightField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+         </children>
+      </GridPane>
+      <ButtonBar layoutX="176.0" layoutY="233.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+        <buttons>
+            <Button mnemonicParsing="false" onAction="#handleClose" text="Close" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>
